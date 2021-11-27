@@ -1,13 +1,6 @@
-import re
+from datas_br import DatasBR
 
-from TelefonesBR import TelefonesBR
+cadastro = DatasBR()
 
-telefone = "551226481234"
+print(cadastro.dia_semana())
 
-telefone_objeto = TelefonesBR(telefone)
-# padrao = "([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})"
-#
-# resposta = re.findall(padrao, telefone)
-# print(resposta)
-
-print(telefone_objeto)
