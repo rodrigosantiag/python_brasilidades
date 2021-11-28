@@ -1,3 +1,5 @@
+import requests
+
 class BuscaEndereco:
     def __init__(self, cep):
         cep = str(cep)
@@ -18,3 +20,10 @@ class BuscaEndereco:
 
     def format_cep(self):
         return f"{self.cep[:5]}-{self.cep[5:]}"
+
+    def acessa_via_cep(self):
+        url = f"http://viacep.com.br/ws/{self.cep}/json"
+
+        response = requests.get(url)
+
+        return response.json()

@@ -1,6 +1,10 @@
+import requests
+
 from acesso_cep import BuscaEndereco
 
-cep = 12768934
-objeto_cep = BuscaEndereco(cep)
+cep = "01001000"
 
-print(objeto_cep)
+objeto_cep = BuscaEndereco(cep)
+a = objeto_cep.acessa_via_cep()
+
+print(a)
